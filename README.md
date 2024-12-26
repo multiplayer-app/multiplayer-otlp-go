@@ -7,7 +7,7 @@ The `multiplayer-otlp-go` module integrates OpenTelemetry with the Multiplayer p
 To install the `multiplayer-otlp-go` module, use the following command:
 
 ```bash
-go get github.com/your-organization/multiplayer-otlp-go
+go get github.com/multiplayer-app/multiplayer-otlp-go
 ```
 
 ### Multiplayer Exporter
