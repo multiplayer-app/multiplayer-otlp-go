@@ -1,4 +1,4 @@
-package pkg
+package multiplayer
 
 const (
 	MULTIPLAYER_TRACE_DOC_PREFIX                 = "d0cd0c"

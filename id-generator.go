@@ -1,4 +1,4 @@
-package pkg
+package multiplayer
 
 import (
 	"context"
@@ -25,9 +25,20 @@ func NewRatioDependentIdGenerator(autoDocTracesRatio float64) otelTrace.IDGenera
 	_ = binary.Read(crand.Reader, binary.LittleEndian, &rngSeed)
 
 	return &ratioDependentIdGenerator{
-		traceIDUpperBound: uint64(autoDocTracesRatio * (1 << 63)),
+		traceIDUpperBound: uint64(normalizeRatio(autoDocTracesRatio) * (1 << 63)),
 		randSource:        rand.New(rand.NewSource(rngSeed)),
 	}
+}
+
+func normalizeRatio(autoDocTracesRatio float64) float64 {
+	if autoDocTracesRatio > 1 {
+		return 1.0
+	}
+
+	if autoDocTracesRatio < 0 {
+		return 0
+	}
+	return autoDocTracesRatio
 }
 
 func (gen *ratioDependentIdGenerator) SetDebugSessionShortID(debugSessionShortID string) {

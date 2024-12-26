@@ -1,4 +1,4 @@
-package pkg
+package multiplayer
 
 import (
 	"go.opentelemetry.io/otel/exporters/otlp/otlptrace"

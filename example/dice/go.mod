@@ -1,4 +1,4 @@
-module github.com/multiplayer-app/multiplayer-otlp-go/example
+module github.com/multiplayer-app/multiplayer-otlp-go/example/dice
 
 go 1.22.7
 
@@ -35,4 +35,4 @@ require (
 	google.golang.org/protobuf v1.36.1 // indirect
 )
 
-replace github.com/multiplayer-app/multiplayer-otlp-go => ../
+replace github.com/multiplayer-app/multiplayer-otlp-go => ../../

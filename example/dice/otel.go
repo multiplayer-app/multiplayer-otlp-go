@@ -3,14 +3,13 @@ package main
 import (
 	"context"
 	"errors"
+	"github.com/multiplayer-app/multiplayer-otlp-go"
 	"os"
 	"time"
 
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/propagation"
 	"go.opentelemetry.io/otel/sdk/trace"
-
-	multiplayer "github.com/multiplayer-app/multiplayer-otlp-go"
 )
 
 // setupOTelSDK bootstraps the OpenTelemetry pipeline.
