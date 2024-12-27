@@ -3,7 +3,7 @@ package multiplayer
 const (
 	MULTIPLAYER_TRACE_DOC_PREFIX                 = "d0cd0c"
 	MULTIPLAYER_TRACE_DEBUG_PREFIX               = "debdeb"
-	MULTIPLAYER_OTEL_DEFAULT_TRACES_EXPORTER_URL = "http://localhost/v1/traces"
+	MULTIPLAYER_OTEL_DEFAULT_TRACES_EXPORTER_URL = "https://api.multiplayer.app/v1/traces"
 	MULTIPLAYER_OTEL_DEFAULT_LOGS_EXPORTER_URL   = "https://api.multiplayer.app/v1/logs"
 	MULTIPLAYER_ATTRIBUTE_PREFIX                 = "multiplayer."
 	ATTR_MULTIPLAYER_DEBUG_SESSION               = "multiplayer.debug_session._id"
